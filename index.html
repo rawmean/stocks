@@ -29,29 +29,29 @@
     <p style="font-family: 'Roboto', sans-serif;">Closing Price = 572.3 on 2024-09-26</p>
     <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 567.5</p>
     <div id="gauge_SPY" style="width: 300px; height: 300px; margin: auto;"></div>
-    <div>
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/gauge-chart/dist/gauge-chart.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        document.addEventListener(&#x27;DOMContentLoaded&#x27;, function() {
-            const tickers = [&#x27;VTI&#x27;, &#x27;QQQ&#x27;, &#x27;SPY&#x27;];  // Pass tickers to JavaScript
-            const rsiValues = {&quot;VTI&quot;: 64.45408750316253, &quot;QQQ&quot;: 63.72917313480107, &quot;SPY&quot;: 65.13346647400991};  // RSI values
-            const predictions = {&quot;VTI&quot;: 280.938663769818, &quot;QQQ&quot;: 479.81790407981316, &quot;SPY&quot;: 567.5389478454103};  // Predictions
+    <script type="module">
+    <script src="https://cdn.jsdelivr.net/npm/gauge-chart/dist/gauge-chart.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tickers = ['VTI', 'QQQ', 'SPY'];  // Pass tickers to JavaScript
+            const rsiValues = {"VTI": 64.45408750316253, "QQQ": 63.72917319210178, "SPY": 65.13346614278646};  // RSI values
+            const predictions = {"VTI": 280.938663769818, "QQQ": 479.8178477160424, "SPY": 567.5389478454103};  // Predictions
 
-            tickers.forEach(ticker =&gt; {
-                const element = document.getElementById(&#x27;gauge_&#x27; + ticker);
+            tickers.forEach(ticker => {
+                const element = document.getElementById('gauge_' + ticker);
                 const gaugeOptions = {
                     hasNeedle: true,
-                    needleColor: &#x27;gray&#x27;,
+                    needleColor: 'gray',
                     needleUpdateSpeed: 1000,
-                    arcColors: [&#x27;rgb(44, 151, 222)&#x27;, &#x27;lightgray&#x27;],
-                    rangeLabel: [&#x27;0&#x27;, &#x27;100&#x27;],
+                    arcColors: ['rgb(44, 151, 222)', 'lightgray'],
+                    rangeLabel: ['0', '100'],
                     centralLabel: rsiValues[ticker].toFixed(1)  // Display RSI as central label
                 };
                 const gauge = GaugeChart.gaugeChart(element, 300, gaugeOptions);
                 gauge.updateNeedle(rsiValues[ticker]);  // Update with RSI value
             });
         });
-    &lt;/script&gt;
-    </div>
+    </script>
+    </script>
   </body>
 </div>

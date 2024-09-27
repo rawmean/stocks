@@ -32,8 +32,7 @@
     <p style="font-family: 'Roboto', sans-serif;">Closing Price = 572.3 on 2024-09-26</p>
     <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 567.5</p>
     <div id="gauge_SPY" style="width: 300px; height: 300px; margin: auto;"></div>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/gauge-chart@1.1.0/dist/gauge.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const tickers = ['VTI', 'QQQ', 'SPY'];  // Pass tickers to JavaScript
@@ -50,7 +49,7 @@
                     rangeLabel: ['0', '100'],
                     centralLabel: rsiValues[ticker].toFixed(1)  // Display RSI as central label
                 };
-                const gauge = GaugeChart.gaugeChart(element, 300, gaugeOptions);
+                const gauge = Chart.gaugeChart(element, 300, gaugeOptions);
                 gauge.updateNeedle(rsiValues[ticker]);  // Update with RSI value
             });
         });

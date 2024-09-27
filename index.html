@@ -8,7 +8,8 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/gauge-chart@latest/dist/bundle.mjs"></script>
+  </head>
 <body>
     <h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Stock Prediction Results</h1>
     <div style="text-align: center;">
@@ -32,7 +33,7 @@
     <p style="font-family: 'Roboto', sans-serif;">Closing Price = 572.3 on 2024-09-26</p>
     <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 567.5</p>
     <div id="gauge_SPY" style="width: 300px; height: 300px; margin: auto;"></div>
-    <script src="https://cdn.jsdelivr.net/npm/gauge-chart@latest/dist/bundle.mjs"></script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             const tickers = ['VTI', 'QQQ', 'SPY'];  // Pass tickers to JavaScript
             const rsiValues = {"VTI": 64.45408750316253, "QQQ": 63.72917313480107, "SPY": 65.13346614278646};  // RSI values
@@ -48,7 +49,7 @@
                     rangeLabel: ['0', '100'],
                     centralLabel: rsiValues[ticker].toFixed(1)  // Display RSI as central label
                 };
-                const gauge = gaugeChart(element, 300, gaugeOptions);
+                const gauge = GaugeChart.gaugeChart(element, 300, gaugeOptions);
                 gauge.updateNeedle(rsiValues[ticker]);  // Update with RSI value
             });
         });

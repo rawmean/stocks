@@ -29,11 +29,12 @@
     <p style="font-family: 'Roboto', sans-serif;">Closing Price = 571.5 on 2024-09-27</p>
     <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 569.1</p>
     <div id="gauge_SPY" style="width: 300px; height: 300px; margin: auto;"></div>
-    <script>
+
+    <script type="module">
       import * as GaugeChart from 'https://unpkg.com/gauge-chart@next/dist/bundle.mjs'
         document.addEventListener('DOMContentLoaded', function() {
             const tickers = ['VTI', 'QQQ', 'SPY'];  // Pass tickers to JavaScript
-            const rsiValues = {"VTI": 61.534015219060144, "QQQ": 60.88949143566792, "SPY": 64.00048821041092};  // RSI values
+            const rsiValues = {"VTI": 61.534015219060144, "QQQ": 60.88949139464337, "SPY": 64.00048821041092};  // RSI values
             const predictions = {"VTI": 281.40190417304984, "QQQ": 484.3912634858551, "SPY": 569.1332863194907};  // Predictions
 
             tickers.forEach(ticker => {
@@ -51,5 +52,7 @@
             });
         });
     </script>
+
+    
   </body>
 </div>

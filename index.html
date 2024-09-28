@@ -1,26 +1,58 @@
-<div>
-  <head>
-<title>Stock Prediction Results</title>    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Prediction Results</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-  </head>
-  <body>
+</head>
+<body>
     <h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Stock Prediction Results</h1>
     <div style="text-align: center;">
-<img src="images/VTI.png" alt="Graph Image">    </div>
-    <p style="font-family: 'Roboto', sans-serif;">RSI = 61.5</p>
-    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 282.0 on 2024-09-27</p>
-    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 281.4</p>
+        <img src="images/VTI.png" alt="Graph Image">
+    </div>
+    <p style="font-family: 'Roboto', sans-serif;">RSI = 64.5</p>
+    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 283.2 on 2024-09-26</p>
+    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 280.9</p>
+    <div id="gauge_VTI" style="width: 300px; height: 300px; margin: auto;"></div>
     <div style="text-align: center;">
-<img src="images/QQQ.png" alt="Graph Image">    </div>
-    <p style="font-family: 'Roboto', sans-serif;">RSI = 60.9</p>
-    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 486.8 on 2024-09-27</p>
-    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 484.4</p>
+        <img src="images/QQQ.png" alt="Graph Image">
+    </div>
+    <p style="font-family: 'Roboto', sans-serif;">RSI = 63.7</p>
+    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 489.5 on 2024-09-26</p>
+    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 479.8</p>
+    <div id="gauge_QQQ" style="width: 300px; height: 300px; margin: auto;"></div>
     <div style="text-align: center;">
-<img src="images/SPY.png" alt="Graph Image">    </div>
-    <p style="font-family: 'Roboto', sans-serif;">RSI = 64.0</p>
-    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 571.5 on 2024-09-27</p>
-    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 569.1</p>
-  </body>
-</div>
+        <img src="images/SPY.png" alt="Graph Image">
+    </div>
+    <p style="font-family: 'Roboto', sans-serif;">RSI = 65.1</p>
+    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 572.3 on 2024-09-26</p>
+    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 567.5</p>
+    <div id="gauge_SPY" style="width: 300px; height: 300px; margin: auto;"></div>
+    <script type="module">
+      import * as GaugeChart from 'https://unpkg.com/gauge-chart@next/dist/bundle.mjs'
+        document.addEventListener('DOMContentLoaded', function() {
+            const tickers = ['VTI', 'QQQ', 'SPY'];  // Pass tickers to JavaScript
+            const rsiValues = {"VTI": 64.45408750316253, "QQQ": 63.72917313480107, "SPY": 65.13346614278646};  // RSI values
+            const predictions = {"VTI": 280.938663769818, "QQQ": 479.81790407981316, "SPY": 567.5389478454103};  // Predictions
+
+            tickers.forEach(ticker => {
+                const element = document.getElementById('gauge_' + ticker);
+                const gaugeOptions = {
+                    hasNeedle: true,
+                    needleColor: 'gray',
+                    needleUpdateSpeed: 1000,
+                    arcColors: ['rgb(44, 151, 222)', 'lightgray'],
+                    rangeLabel: ['0', '100'],
+                    centralLabel: rsiValues[ticker].toFixed(1)  // Display RSI as central label
+                };
+                const gauge = gaugeChart(element, 300, gaugeOptions);
+                gauge.updateNeedle(rsiValues[ticker]);  // Update with RSI value
+            });
+        });
+    </script>
+</body>
+</html>

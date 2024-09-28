@@ -49,7 +49,7 @@
                     rangeLabel: ['0', '100'],
                     centralLabel: rsiValues[ticker].toFixed(1)  // Display RSI as central label
                 };
-                const gauge = gaugeChart(element, 300, gaugeOptions);
+                const gauge = GaugeChart.gaugeChart(element, 300, gaugeOptions);
                 gauge.updateNeedle(rsiValues[ticker]);  // Update with RSI value
             });
         });

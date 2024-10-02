@@ -1,6 +1,6 @@
 <div>
   <head>
-    <title>Analysis for SPY</title>
+    <title>ETF Prediction</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -9,7 +9,7 @@
   </head>
   <body>
     <div style="text-align: center;">
-      <h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Stock Analysis for VTI</h1>
+      <h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Analysis for VTI</h1>
       <img src="images/VTI.png" alt="Graph Image">
     </div>
     <div id="gauge_VTI" style="width: 300px; height: 300px; margin: auto;"></div>
@@ -17,7 +17,7 @@
     <p style="font-family: 'Roboto', sans-serif;">Closing Price = 280.6 on 2024-10-01</p>
     <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 281.0</p>
     <div style="text-align: center;">
-      <h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Stock Analysis for QQQ</h1>
+      <h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Analysis for QQQ</h1>
       <img src="images/QQQ.png" alt="Graph Image">
     </div>
     <div id="gauge_QQQ" style="width: 300px; height: 300px; margin: auto;"></div>
@@ -25,7 +25,7 @@
     <p style="font-family: 'Roboto', sans-serif;">Closing Price = 481.3 on 2024-10-01</p>
     <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 486.2</p>
     <div style="text-align: center;">
-      <h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Stock Analysis for SPY</h1>
+      <h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Analysis for SPY</h1>
       <img src="images/SPY.png" alt="Graph Image">
     </div>
     <div id="gauge_SPY" style="width: 300px; height: 300px; margin: auto;"></div>
@@ -37,7 +37,7 @@
       import * as GaugeChart from 'https://unpkg.com/gauge-chart@next/dist/bundle.mjs'
         document.addEventListener('DOMContentLoaded', function() {
             const tickers = ['VTI', 'QQQ', 'SPY'];  // Pass tickers to JavaScript
-            const rsiValues = {"VTI": 58.625761258148, "QQQ": 54.911129766032495, "SPY": 58.8407607498081};  // RSI values
+            const rsiValues = {"VTI": 58.62576087399193, "QQQ": 54.91112978108483, "SPY": 58.8407605790945};  // RSI values
             const predictions = {"VTI": 281.02317442485946, "QQQ": 486.15195510510824, "SPY": 569.499333820554};  // Predictions
             const sigmoid_value_dict = {"VTI": 51.936890623321254, "QQQ": 62.194282900506714, "SPY": 51.89634351825478};  // Sigmoid metrics
 

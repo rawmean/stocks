@@ -34,7 +34,7 @@
       import * as GaugeChart from 'https://unpkg.com/gauge-chart@next/dist/bundle.mjs'
         document.addEventListener('DOMContentLoaded', function() {
             const tickers = ['VTI', 'QQQ', 'SPY'];  // Pass tickers to JavaScript
-            const rsiValues = {"VTI": 58.625761258148, "QQQ": 54.911129766032495, "SPY": 58.8407607498081};  // RSI values
+            const rsiValues = {"VTI": 58.625761258148, "QQQ": 54.91112978108483, "SPY": 58.8407605790945};  // RSI values
             const predictions = {"VTI": 281.02317442485946, "QQQ": 486.15195510510824, "SPY": 569.499333820554};  // Predictions
 
             tickers.forEach(ticker => {
@@ -44,7 +44,7 @@
                     needleColor: 'gray',
                     needleUpdateSpeed: 1000,
                     arcColors: ['rgb(44, 151, 222)', 'lightgray'],
-                    rangeLabel: ['Cheap', 'Expensive'],
+                    rangeLabel: ['0', '1'],
                     centralLabel: sigmoid_value_dict[ticker].toFixed(1)  
                 };
                 const gauge = GaugeChart.gaugeChart(element, 300, gaugeOptions);

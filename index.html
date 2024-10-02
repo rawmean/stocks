@@ -11,31 +11,31 @@
     <div style="text-align: center;">
       <img src="images/VTI.png" alt="Graph Image">
     </div>
-    <p style="font-family: 'Roboto', sans-serif;">RSI = 63.7</p>
-    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 282.0 on 2024-09-27</p>
-    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 280.5</p>
+    <p style="font-family: 'Roboto', sans-serif;">RSI = 58.6</p>
+    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 280.6 on 2024-10-01</p>
+    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 281.0</p>
     <div id="gauge_VTI" style="width: 300px; height: 300px; margin: auto;"></div>
     <div style="text-align: center;">
       <img src="images/QQQ.png" alt="Graph Image">
     </div>
-    <p style="font-family: 'Roboto', sans-serif;">RSI = 60.9</p>
-    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 486.8 on 2024-09-27</p>
-    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 484.4</p>
+    <p style="font-family: 'Roboto', sans-serif;">RSI = 54.9</p>
+    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 481.3 on 2024-10-01</p>
+    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 486.2</p>
     <div id="gauge_QQQ" style="width: 300px; height: 300px; margin: auto;"></div>
     <div style="text-align: center;">
       <img src="images/SPY.png" alt="Graph Image">
     </div>
-    <p style="font-family: 'Roboto', sans-serif;">RSI = 64.0</p>
-    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 571.5 on 2024-09-27</p>
-    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 569.1</p>
+    <p style="font-family: 'Roboto', sans-serif;">RSI = 58.8</p>
+    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 568.6 on 2024-10-01</p>
+    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 569.5</p>
     <div id="gauge_SPY" style="width: 300px; height: 300px; margin: auto;"></div>
 
     <script type="module">
       import * as GaugeChart from 'https://unpkg.com/gauge-chart@next/dist/bundle.mjs'
         document.addEventListener('DOMContentLoaded', function() {
             const tickers = ['VTI', 'QQQ', 'SPY'];  // Pass tickers to JavaScript
-            const rsiValues = {"VTI": 63.71518833428146, "QQQ": 60.88707963560762, "SPY": 63.998152005560804};  // RSI values
-            const predictions = {"VTI": 280.5358533430561, "QQQ": 484.39075804968985, "SPY": 569.1324265607755};  // Predictions
+            const rsiValues = {"VTI": 58.625761258148, "QQQ": 54.911129766032495, "SPY": 58.8407605790945};  // RSI values
+            const predictions = {"VTI": 281.02317442485946, "QQQ": 486.15195510510824, "SPY": 569.499333820554};  // Predictions
 
             tickers.forEach(ticker => {
                 const element = document.getElementById('gauge_' + ticker);

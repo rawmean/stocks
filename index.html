@@ -34,9 +34,9 @@
       import * as GaugeChart from 'https://unpkg.com/gauge-chart@next/dist/bundle.mjs'
         document.addEventListener('DOMContentLoaded', function() {
             const tickers = ['VTI', 'QQQ', 'SPY'];  // Pass tickers to JavaScript
-            const rsiValues = {"VTI": 58.62576087399193, "QQQ": 54.91112978108483, "SPY": 58.8407605790945};  // RSI values
+            const rsiValues = {"VTI": 58.62576087399193, "QQQ": 54.911129766032495, "SPY": 58.8407607498081};  // RSI values
             const predictions = {"VTI": 281.02317442485946, "QQQ": 486.15195510510824, "SPY": 569.499333820554};  // Predictions
-            const sigmoid_value_dict = {"VTI": 0.5193689062332125, "QQQ": 0.6219428290050671, "SPY": 0.5189634351825478};  // Sigmoid metrics
+            const sigmoid_value_dict = {"VTI": 51.936890623321254, "QQQ": 62.194282900506714, "SPY": 51.89634351825478};  // Sigmoid metrics
 
             tickers.forEach(ticker => {
                 const element = document.getElementById('gauge_' + ticker);
@@ -44,8 +44,9 @@
                     hasNeedle: true,
                     needleColor: 'gray',
                     needleUpdateSpeed: 1000,
+                    arcDelimiters: [0, 20, 80, 100],
                     arcColors: ['rgb(44, 151, 222)', 'lightgray'],
-                    rangeLabel: ['0', '1'],
+                    rangeLabel: ['Expensice', 'Chaep'],
                     centralLabel: sigmoid_value_dict[ticker].toFixed(1)  
                 };
                 const gauge = GaugeChart.gaugeChart(element, 300, gaugeOptions);

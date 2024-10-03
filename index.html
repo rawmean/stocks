@@ -1,7 +1,6 @@
 <div>
   <head>
-    <title>ETF Prediction</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap">
+<title>ETF Prediction</title>    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -11,35 +10,32 @@
     <div style="text-align: center;">
       <h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Analysis for VTI</h1>
       <div id="gauge_VTI" style="width: 300px; height: 300px; margin: 0 auto;"></div>
-      <img src="images/VTI.png" alt="Graph Image" style="margin: 0;">
-    </div>
-    <p style="font-family: 'Roboto', sans-serif;">RSI = 58.6</p>
-    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 280.6 on 2024-10-01</p>
-    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 281.0</p>
+<img src="images/VTI.png" alt="Graph Image" style="margin: 0;">    </div>
+    <p style="font-family: 'Roboto', sans-serif;">RSI = 58.7</p>
+    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 280.6 on 2024-10-02</p>
+    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 280.9</p>
     <div style="text-align: center;">
       <h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Analysis for QQQ</h1>
       <div id="gauge_QQQ" style="width: 300px; height: 300px; margin: 0 auto;"></div>
-      <img src="images/QQQ.png" alt="Graph Image" style="margin: 0;">
-    </div>
-    <p style="font-family: 'Roboto', sans-serif;">RSI = 54.9</p>
-    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 481.3 on 2024-10-01</p>
-    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 486.2</p>
+<img src="images/QQQ.png" alt="Graph Image" style="margin: 0;">    </div>
+    <p style="font-family: 'Roboto', sans-serif;">RSI = 55.4</p>
+    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 482.0 on 2024-10-02</p>
+    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 486.5</p>
     <div style="text-align: center;">
       <h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Analysis for SPY</h1>
       <div id="gauge_SPY" style="width: 300px; height: 300px; margin: 0 auto;"></div>
-      <img src="images/SPY.png" alt="Graph Image" style="margin: 0;">
-    </div>
-    <p style="font-family: 'Roboto', sans-serif;">RSI = 58.8</p>
-    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 568.6 on 2024-10-01</p>
-    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 569.5</p>
+<img src="images/SPY.png" alt="Graph Image" style="margin: 0;">    </div>
+    <p style="font-family: 'Roboto', sans-serif;">RSI = 59.1</p>
+    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 568.9 on 2024-10-02</p>
+    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 571.1</p>
 
     <script type="module">
       import * as GaugeChart from 'https://unpkg.com/gauge-chart@next/dist/bundle.mjs'
         document.addEventListener('DOMContentLoaded', function() {
             const tickers = ['VTI', 'QQQ', 'SPY'];  // Pass tickers to JavaScript
-            const rsiValues = {"VTI": 58.625761258148, "QQQ": 54.91112978108483, "SPY": 58.8407605790945};  // RSI values
-            const predictions = {"VTI": 281.02317442485946, "QQQ": 486.15195510510824, "SPY": 569.499333820554};  // Predictions
-            const sigmoid_value_dict = {"VTI": 51.936890623321254, "QQQ": 62.194282900506714, "SPY": 51.89634351825478};  // Sigmoid metrics
+            const rsiValues = {"VTI": 58.73229674718948, "QQQ": 55.441436242993646, "SPY": 59.056222651214476};  // RSI values
+            const predictions = {"VTI": 280.8540815107267, "QQQ": 486.53308358383555, "SPY": 571.0658838216681};  // Predictions
+            const sigmoid_value_dict = {"VTI": 50.93570824973208, "QQQ": 61.45942825442137, "SPY": 54.74311467287143};  // Sigmoid metrics
 
             tickers.forEach(ticker => {
                 const element = document.getElementById('gauge_' + ticker);
@@ -58,6 +54,5 @@
         });
     </script>
 
-    
-  </body>
+      </body>
 </div>

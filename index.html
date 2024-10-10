@@ -11,31 +11,31 @@
       <h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Analysis for VTI</h1>
       <div id="gauge_VTI" style="width: 300px; height: 300px; margin: 0 auto;"></div>
 <img src="images/VTI.png" alt="Graph Image" style="margin: 0;">    </div>
-    <p style="font-family: 'Roboto', sans-serif;">RSI = 59.7</p>
-    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 282.5 on 2024-10-08</p>
-    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 280.9</p>
+    <p style="font-family: 'Roboto', sans-serif;">RSI = 62.8</p>
+    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 284.5 on 2024-10-09</p>
+    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 281.3</p>
     <div style="text-align: center;">
       <h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Analysis for QQQ</h1>
       <div id="gauge_QQQ" style="width: 300px; height: 300px; margin: 0 auto;"></div>
 <img src="images/QQQ.png" alt="Graph Image" style="margin: 0;">    </div>
-    <p style="font-family: 'Roboto', sans-serif;">RSI = 59.6</p>
-    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 489.3 on 2024-10-08</p>
-    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 484.7</p>
+    <p style="font-family: 'Roboto', sans-serif;">RSI = 62.2</p>
+    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 493.1 on 2024-10-09</p>
+    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 485.9</p>
     <div style="text-align: center;">
       <h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Analysis for SPY</h1>
       <div id="gauge_SPY" style="width: 300px; height: 300px; margin: 0 auto;"></div>
 <img src="images/SPY.png" alt="Graph Image" style="margin: 0;">    </div>
-    <p style="font-family: 'Roboto', sans-serif;">RSI = 60.4</p>
-    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 573.2 on 2024-10-08</p>
-    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 570.4</p>
+    <p style="font-family: 'Roboto', sans-serif;">RSI = 63.5</p>
+    <p style="font-family: 'Roboto', sans-serif;">Closing Price = 577.1 on 2024-10-09</p>
+    <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 571.3</p>
 
     <script type="module">
       import * as GaugeChart from 'https://unpkg.com/gauge-chart@next/dist/bundle.mjs'
         document.addEventListener('DOMContentLoaded', function() {
             const tickers = ['VTI', 'QQQ', 'SPY'];  // Pass tickers to JavaScript
-            const rsiValues = {"VTI": 59.72835052295039, "QQQ": 59.640579527774705, "SPY": 60.434217227621666};  // RSI values
-            const predictions = {"VTI": 280.8987216273355, "QQQ": 484.6834565761463, "SPY": 570.4400226049125};  // Predictions
-            const sigmoid_value_dict = {"VTI": 42.9634065634643, "QQQ": 38.62716302315704, "SPY": 44.183077417383096};  // Sigmoid metrics
+            const rsiValues = {"VTI": 62.828627328563115, "QQQ": 62.187095892519594, "SPY": 63.517077831008905};  // RSI values
+            const predictions = {"VTI": 281.26135512408945, "QQQ": 485.90388366751137, "SPY": 571.2962988300471};  // Predictions
+            const sigmoid_value_dict = {"VTI": 36.38620953252745, "QQQ": 32.71574837320608, "SPY": 37.82720898811917};  // Sigmoid metrics
 
             tickers.forEach(ticker => {
                 const element = document.getElementById('gauge_' + ticker);

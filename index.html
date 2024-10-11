@@ -11,7 +11,7 @@
       <h1 style="text-align: center; font-family: 'Roboto', sans-serif;">Analysis for VTI</h1>
       <div id="gauge_VTI" style="width: 300px; height: 300px; margin: 0 auto;"></div>
 <img src="images/VTI.png" alt="Graph Image" style="margin: 0;">    </div>
-    <p style="font-family: 'Roboto', sans-serif;">RSI = 62.8</p>
+    <p style="font-family: 'Roboto', sans-serif;">RSI = 62.9</p>
     <p style="font-family: 'Roboto', sans-serif;">Closing Price = 284.5 on 2024-10-09</p>
     <p style="font-family: 'Roboto', sans-serif;">Average Prediction 5 days ahead = 281.3</p>
     <div style="text-align: center;">
@@ -33,9 +33,9 @@
       import * as GaugeChart from 'https://unpkg.com/gauge-chart@next/dist/bundle.mjs'
         document.addEventListener('DOMContentLoaded', function() {
             const tickers = ['VTI', 'QQQ', 'SPY'];  // Pass tickers to JavaScript
-            const rsiValues = {"VTI": 62.828627328563115, "QQQ": 62.187095892519594, "SPY": 63.517077831008905};  // RSI values
-            const predictions = {"VTI": 281.26135512408945, "QQQ": 485.90388366751137, "SPY": 571.2962988300471};  // Predictions
-            const sigmoid_value_dict = {"VTI": 36.38620953252745, "QQQ": 32.71574837320608, "SPY": 37.82720898811917};  // Sigmoid metrics
+            const rsiValues = {"VTI": 62.85662253400105, "QQQ": 62.20726165103664, "SPY": 63.54274562071076};  // RSI values
+            const predictions = {"VTI": 281.2604434852474, "QQQ": 485.902328429732, "SPY": 571.2953747008092};  // Predictions
+            const sigmoid_value_dict = {"VTI": 36.38256979010799, "QQQ": 32.71234172144426, "SPY": 37.825360982271974};  // Sigmoid metrics
 
             tickers.forEach(ticker => {
                 const element = document.getElementById('gauge_' + ticker);
